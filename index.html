@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seu Nome | Portfólio de Análise e Desenvolvimento de Sistemas</title>
+  <meta name="description" content="Projetos de tecnologia de Seu Nome, estudante de Análise e Desenvolvimento de Sistemas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__interno">
+      <a class="topo__marca" href="#inicio">Seu Nome</a>
+      <button class="topo__menu" id="botao-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="topo__nav" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="tema" id="botao-tema" type="button" aria-pressed="false">Modo escuro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1 class="hero__titulo">Construo sistemas que resolvem problemas reais.</h1>
+        <p class="hero__texto">Sou Seu Nome, estudante de Análise e Desenvolvimento de Sistemas. Aqui reúno os projetos que criei e o que aprendi em cada um.</p>
+        <p class="hero__acoes">
+          <a class="botao" href="#projetos">Ver projetos</a>
+          <a class="botao botao--secundario" href="#contato">Falar comigo</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="secao" id="sobre">
+      <div class="container sobre">
+        <div>
+          <h2>Sobre mim</h2>
+          <p>Estou cursando Análise e Desenvolvimento de Sistemas e transformo o que aprendo em projetos práticos. Este site cresce junto comigo: cada projeto novo ganha seu lugar aqui.</p>
+          <p>Escreva aqui um segundo parágrafo com o que te motiva e o tipo de oportunidade que você procura.</p>
+        </div>
+        <dl class="foco">
+          <div><dt>Formação</dt><dd>Análise e Desenvolvimento de Sistemas</dd></div>
+          <div><dt>Estudando agora</dt><dd>JavaScript e bancos de dados</dd></div>
+          <div><dt>Próximo passo</dt><dd>React</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="secao" id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar projetos por tecnologia"></div>
+        <ul class="projetos" id="lista-projetos"></ul>
+      </div>
+    </section>
+
+    <section class="secao" id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>Quer conversar sobre um projeto ou uma vaga? Me escreva.</p>
+        <ul class="contatos">
+          <li><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
+          <li><a href="https://www.linkedin.com/in/seu-usuario" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/seu-usuario" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>© <span id="ano"></span> Seu Nome. Feito à mão com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
