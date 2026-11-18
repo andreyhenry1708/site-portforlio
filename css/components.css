@@ -1,0 +1,75 @@
+/* Componentes reutilizáveis */
+
+.etiqueta {
+    margin-bottom: var(--esp-4);
+    font-family: var(--fonte-codigo);
+    font-size: var(--texto-sm);
+    color: var(--acento);
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    padding: var(--esp-3) var(--esp-5);
+    border: 2px solid var(--destaque);
+    border-radius: var(--raio-p);
+    background: var(--destaque);
+    color: var(--bg);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.bota:hover {
+    background: transparent;
+    color: var(--destaque);
+}
+.botao__secundario {
+    background: transparent;
+    color: var(--destaque);
+}
+
+/* Janela de código */
+.janela {
+    overflow: hidden;
+    background: var(--bg-elevado);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-m);
+}
+.janela__barra {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-3);
+    padding: var(--esp-3) var(--esp-4);
+    background: var(--bg-sutil);
+    border-bottom: 1px solid var(--borda);
+}
+.janela__pontos {
+    display: flex;
+    gap: var(--esp-2);
+}
+
+.janela__pontos span {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--borda);
+}
+.janela__arquivo {
+    font-family: var(--fonte-codigo);
+    font-size: var(--texto-sm);
+    color: var(--texto-suave);
+}
+.janela__codigo {
+    margin: 0;
+    padding: var(--esp-5);
+    overflow-x: auto;
+    font-family: var(--fonte-codigo);
+    font-size: var(--texto-sm);
+    line-height: 1.8;
+    color: var(--texto-suave);
+}
+
+/* Cores de sintaxe */
+.c-palavra { color: var(--codigo-palavra); }
+.c-chave   { color: var(--destaque); }
+.c-texto   { color: var(--acento); }

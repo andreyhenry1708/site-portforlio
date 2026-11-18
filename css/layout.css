@@ -95,3 +95,36 @@
     font-size: var(--texto-sm);
 }
 .rodape p { margin: 0; }
+
+/* Abertura */
+.abertura {
+    display: grid;
+    gap: var(--esp-7);
+    align-content: center;
+    min-height: calc(100vh - 4rem);
+    min-height: calc(100svh - 4 rem);
+}
+.abertura > * { min-width: 0; }
+
+.abertura h1 {
+    font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
+    text-wrap: balance;
+}
+.abertura__descricao {
+    font-size: var(--texto-lg);
+    color: var(--texto-suave);
+}
+.abertura__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-3);
+    margin-top: var(--esp-5);
+}
+
+@media (min-width: 60rem) {
+    .abertura{
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
+        gap: var(--esp-8);
+    }
+}

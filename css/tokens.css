@@ -9,6 +9,9 @@
   --texto-suave: #9aa6bc;
   --destaque: #7aa2f7;
   --acento: #e0af68;
+  
+    /* Cor de sintaxe (janela de código); as outras reaproveitam --destaque e --acento */
+  --codigo-palavra: #bb9af7;
 
   /* Fontes (a segunda e a terceira opção são reservas) */
   --fonte-titulo: "Bricolage Grotesque", system-ui, sans-serif;
