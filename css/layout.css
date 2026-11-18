@@ -1,0 +1,97 @@
+/* layout: topo, navegação, seções e rodapé. */
+
+/* topo fixo com fundo translúcido */
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borda);
+}
+
+.topo__interno {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-4);
+    min-height: 4rem;
+}
+
+.topo__marca {
+    font-family: var(--fonte-titulo);
+    font-size: var(--texto-lg);
+    font-weight: 800;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.topo__botao {
+    display: none;
+    font: inherit;
+    color: var(--texto);
+    background: transparent;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-p);
+    padding: var(--esp-2) var(--esp-4);
+    cursor: pointer;
+    transition: background var(--dur) var(--ease);
+}
+.topo__botao:hover { background: var(--bg-sutil); }
+
+.topo__nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-4) var(--esp-5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topo__nav a {
+    color: var(--texto-suave);
+    text-decoration: none;
+}
+.topo__nav a:hover { color: var(--texto); }
+
+/* Celular: com JavaScript, o menu vira um botão que abre uma lista */
+.js .topo__botao { display: inline-block; }
+.js .topo__nav { display: none; }
+.js .topo__nav.aberto {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: var(--esp-4) var(--esp-5) var(--esp-5);
+    background: var(--bg-elevado);
+    border-bottom: 1px solid var(--borda);
+}
+.js .topo__nav ul { flex-direction: column; }
+
+/* Telas menores: navegação em linha, sem botão */
+@media (min-width: 48rem) {
+    .js .topo__botao { display: none; }
+    .js .topo__nav,
+    .js .topo__nav.aberto {
+        display: block;
+        position: static;
+        padding: 0;
+        background: none;
+        border: 0;
+    }
+    .js .topo__nav ul { flex-direction: row; }
+}
+
+/* Seções e rodapé */
+.secao { padding-block: var(--esp-8); }
+.secao + .secao { border-top: 1px solid var(--borda); }
+
+.rodape {
+    padding-block: var(--esp-6);
+    border-top: 1px solid var(--borda);
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+}
+.rodape p { margin: 0; }
