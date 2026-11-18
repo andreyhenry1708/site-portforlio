@@ -1,0 +1,83 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--texto);
+    font-family: var(--fonte-texto);
+    font-size: var(--texto-base);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.1;
+    margin: 0 0 var(--esp-4);
+}
+h1 { font-size: var(--titulo-1); font-weight: 800; }
+h2 { font-size: var(--titulo-2); font-weight: 800; }
+h3 { font-size: var(--titulo-3); font-weight: 600; }
+
+p {
+    margin: 0 0 var(--esp-4);
+    max-width: 65ch;
+}
+
+a {
+    color: var(--destaque);
+    text-underline: 0.2em;
+    transition: color var(--dur) var(--ease);
+}
+a:hover { color: var(--texto); }
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--destaque);
+    color: var(--bg);
+}
+
+:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 3px;
+}
+
+/* Utilitários */
+.container {
+    width: min(100% - 2.5rem, 68rem);
+    margin-inline: auto;
+}
+
+.pular {
+    position: absolute;
+    top: -4rem;
+    left: var(--esp-4);
+    z-index: 100;
+    padding: var(--esp-2) var(--esp-4);
+    border-radius: var(--raio-p);
+    background: var(--destaque);
+    text-decoration: none;
+    transition: top var(--dur) var(--ease);
+}
+.pular, .pular:hover { color: var(--bg); }
+.pular:focus { top: var(--esp-4); }
+
+/* Respeita quem pediu menos movimento no sistema */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
