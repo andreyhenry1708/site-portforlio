@@ -2,7 +2,7 @@
 const botaoMenu = document.querySelector("#botao-menu");
 const menu = document.querySelector("#menu");
 
-function alterarMenu() {
+function alternarMenu() {
     const aberto = menu.classList.toggle("aberto");
     botaoMenu.setAttribute("aria-expanded", String(aberto));
 }
@@ -12,9 +12,15 @@ function fecharMenu() {
     botaoMenu.setAttribute("aria-expanded", "false");
 }
 
-botaoMenu.addEventListener("click", alterarMenu);
+botaoMenu.addEventListener("click", alternarMenu);
 
 menu.addEventListener("click", (evento) => {
+    if (evento.target.closest("a")) {
+        fecharMenu();
+    }
+});
+
+document.addEventListener("keydown", (evento) => {
     if (evento.key === "Escape") {
         fecharMenu();
     }

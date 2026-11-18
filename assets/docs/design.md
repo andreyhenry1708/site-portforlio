@@ -19,6 +19,7 @@ O site precisa **provar**, não só afirmar: mostrar projetos que funcionam, có
 
 **Não-metas (por enquanto)**
 - Usar React (fica para a Versão 2).
+- Parallax (pode entrar depois, se ainda fizer sentido).
 - Backend, banco de dados ou login.
 - Blog completo, comentários, vários idiomas.
 
@@ -56,6 +57,7 @@ Plano de tecnologia (decidido pelo autor): Versão 1 em HTML/CSS/JS puro; Versã
 - Bastante conteúdo, que prenda o leitor.
 - Construção por partes, para praticar.
 - Site pronto para receber projetos futuros.
+- Fundo interativo na abertura (ideia do autor), discreto, sem competir com o texto.
 
 ## 6. Decisões minhas (a confirmar ou corrigir)
 
@@ -67,6 +69,7 @@ Plano de tecnologia (decidido pelo autor): Versão 1 em HTML/CSS/JS puro; Versã
    - Revelação suave ao rolar, só em blocos de leitura, não em tudo.
    - Barra de progresso de leitura e sumário lateral nos estudos de caso.
    - Hover discreto em links e itens de projeto.
+   - Fundo de "constelação" na abertura: pontos ligados por linhas que reagem de leve ao mouse, com baixa opacidade. Pausa com movimento reduzido, em telas pequenas e com a aba oculta.
    - Filtro de projetos por tecnologia.
    - Blocos de código com botão "copiar".
 5. **Tom dos textos:** português do Brasil, primeira pessoa, direto, sempre com evidência (link, print, código).
@@ -76,7 +79,7 @@ Plano de tecnologia (decidido pelo autor): Versão 1 em HTML/CSS/JS puro; Versã
 ## 7. Estrutura do site
 
 **Página inicial (rolagem narrativa)**
-1. Abertura: nome, frase de posicionamento, trecho de código, botões para projetos e contato.
+1. Abertura: etiqueta, título ("Transformo o que aprendo em projetos que funcionam."), texto curto, botões (Ver projetos, Falar comigo) e uma janela de editor com um objeto JavaScript que se escreve sozinho (formação, linguagens, o que está estudando, objetivo), sobre um fundo de constelação.
 2. Destaques: até 3 projetos, cada um com problema e resultado.
 3. Habilidades: cada tecnologia ligada ao projeto que a comprova.
 4. Trajetória: linha do tempo curta de como chegou até aqui.
@@ -92,7 +95,7 @@ Resumo, problema, solução, tecnologias, trechos de código comentados, desafio
 |---|---|---|
 | 0 | Repositório e estrutura de pastas | Git, organização |
 | 1 | Base visual: variáveis, tipografia, layout, tema dark | CSS avançado, variáveis |
-| 2 | Abertura (hero) com o trecho de código animado | JS: temporizadores, DOM |
+| 2 | Abertura: visual estático (tarefa 5), código que se escreve (tarefa 6) e fundo de constelação (tarefa 7) | CSS Grid, JS assíncrono, `canvas` |
 | 3 | Sistema de dados de projetos + lista, destaques e filtro | JS: módulos, `map`, `filter` |
 | 4 | Página-modelo de estudo de caso, sumário e barra de progresso | JS: URL, `IntersectionObserver`, eventos |
 | 5 | Seção de habilidades ligadas a projetos | Estrutura de dados |
